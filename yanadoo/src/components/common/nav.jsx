@@ -25,10 +25,11 @@ let navList = [
 ]
 
 const Nav = () => {
-    let [navHover, setNavHover] = useState(false);
-
+    const [navHover, setNavHover] = useState(false);
+    
     return (
-        <ul className="main-nav-box">
+        <nav className="nav-box">
+            <ul className="main-nav-box">
             {
                 navList.map((mainNav, idx) => (
                     <li key={mainNav.id}>
@@ -47,6 +48,7 @@ const Nav = () => {
                 ))
             }
         </ul>
+        </nav>
     )
 }
 

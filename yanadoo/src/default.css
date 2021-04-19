@@ -1,8 +1,72 @@
+/* reset */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, textarea, button, select, input, pre{margin:0; padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+table{border-collapse:collapse; border-spacing:0;}
+hr{display:none;}
+select{outline:none;}
+p, ul, ol, li, dl, dt, dd, form {list-style-image:none; list-style-position:outside; list-style-type:none; border:0px;}
+img,fieldset,iframe{border:0 none;}
+button{border:0 none;background-color:transparent; cursor:pointer;}
+address,caption,cite,code,dfn,em,var{font-style:normal; font-weight:normal;}
+a{text-decoration:none;}
+
+
+.header-col{
+  width:100%;
+  background-color:goldenrod;
+}
+
+.header-col .inner-col{
+  display:flex;
+  align-items:center;
+  width:1200px;
+  margin:0 auto;
+  border:1px solid firebrick;
+  box-sizing:border-box;
+}
+
+.logo{
+  display:inline-block;
+  width:10%;
+}
+
+.logo img{
+  width:100%;
+}
+
+.nav-box{
+  display:inline-block;
+  width:45%;
+  margin:0 3em 0 4em;
+}
+
+.main-nav-box{
+  display:table;
+  table-layout:fixed;
+  position:relative;
+  width:100%;
+  text-align:center;
+}
+
+.main-nav-box li{
+  display:table-cell;
+  border:1px solid rebeccapurple;
+  box-sizing:border-box;
+}
+
 .sub-nav-box{
   display:none;
 }
 
 .sub-nav-box.active{
   display:block;
+  position:absolute;
+  top:2em;
+  left:0;
   border:1px solid red;
 }
+
+.sub-nav-box li{
+  display:block;
+}
+
