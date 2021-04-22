@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const SearchInput = styled.input`
     width:100%;
+    height:2.5em;
     padding:.2em 1em;
     border:1px solid #444;
     border-radius:2em;
@@ -13,6 +14,7 @@ const SearchInput = styled.input`
 `
 const Div = styled.div`
     display:inline-block;
+    margin-right:1em;
 `
 
 
