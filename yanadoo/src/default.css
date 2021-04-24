@@ -68,6 +68,7 @@ a{text-decoration:none;}
   padding:0 1.4em;
   background-color:#fff;
   box-shadow:.1em .1em .5em .2em rgb(0, 0, 0, .1);
+  z-index:1;
 }
 
 .sub-nav-box.active{
@@ -77,4 +78,3 @@ a{text-decoration:none;}
 .sub-nav-box li{
   display:block;
 }
-

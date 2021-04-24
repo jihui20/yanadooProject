@@ -1,13 +1,24 @@
 import React from 'react';
 import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styled from 'styled-components';
+
+const Div = styled.div`
+  height:300px;
+  background-color:red;
+  color:#fff;
+  font-size:150%;
+  font-weight:800;
+`;
 
 const settings = {
     dots: true,
     arrows: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     // autoplaySpeed: 1000,
-    slidesToShow: 2,
+    slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
       {
@@ -28,32 +39,32 @@ const settings = {
 
 const VisualWrap = () => {
     return (
-    <Slider {...settings}>
-        <div>
-            test1
-        </div>
-        <div>
-            test2
-        </div>
-        <div>
-            test3
-        </div>
-        <div>
-            test4
-        </div>
-        <div>
-            test5
-        </div>
-        <div>
-            test6
-        </div>
-        <div>
-            test7
-        </div>
-        <div>
-            test8
-        </div>
-    </Slider>
+        <Slider {...settings}>
+          <Div>
+              test1
+          </Div>
+          <Div>
+              test2
+          </Div>
+          <Div>
+              test3
+          </Div>
+          <Div>
+              test4
+          </Div>
+          <Div>
+              test5
+          </Div>
+          <Div>
+              test6
+          </Div>
+          <Div>
+              test7
+          </Div>
+          <Div>
+              test8
+          </Div>
+      </Slider>
     )
 }
 

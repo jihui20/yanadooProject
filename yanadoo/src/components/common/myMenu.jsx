@@ -16,7 +16,7 @@ const Ul = styled.ul`
    left:0;
    width:9em;
    background-color:pink;
-
+   z-index:1;
 `
 
 const MyMenu = () => {
