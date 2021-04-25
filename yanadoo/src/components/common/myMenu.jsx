@@ -32,12 +32,12 @@ const MyMenu = () => {
             <button type="button" onClick={handleMenu}>마이 페이지</button>
             {/* <ul menuhover={MenuHover}> */}
             <Ul menuhover={MenuHover}>
-                <li><a href="">내 클래스</a></li>
-                <li><a href="">주문 배송 조회</a></li>
-                <li><a href="">쿠폰</a></li>
-                <li><a href="">찜한 상품</a></li>
-                <li><a href="">나의 문의내역</a></li>
-                <li><a href="">로그아웃</a></li>
+                <li><a href="#!">내 클래스</a></li>
+                <li><a href="#!">주문 배송 조회</a></li>
+                <li><a href="#!">쿠폰</a></li>
+                <li><a href="#!">찜한 상품</a></li>
+                <li><a href="#!">나의 문의내역</a></li>
+                <li><a href="#!">로그아웃</a></li>
             </Ul>
         </Div>
     );

@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <div className="header-col">
             <div className="inner-col">
-                <h1 className="logo"><a href="#"><img src="https://english.yanadoocdn.com/upload/yanadoo/pc/common/logo/logo_ynd_136x38_v2.png" alt="logo" /></a></h1>
+                <h1 className="logo"><a href="#!"><img src="https://english.yanadoocdn.com/upload/yanadoo/pc/common/logo/logo_ynd_136x38_v2.png" alt="logo" /></a></h1>
                 <Nav />
                 <Search />
                 <p><span>이지희</span> 회원님</p>
