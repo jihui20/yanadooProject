@@ -15,15 +15,25 @@ const Ul = styled.ul`
    top:1.5em;
    left:0;
    width:9em;
-   background-color:pink;
+   padding:.5em;
+   font-size:90%;
+   background-color:#fff;
+   box-shadow:.1em .1em .5em .2em rgb(0, 0, 0, .1);
    z-index:1;
+
+   li + li{
+       margin-top:.7em;
+   }
+
+   li > a{
+       color:#000;
+   } 
 `
 
 const MyMenu = () => {
     const [MenuHover, setMenuHover] = useState(false);
 
     const handleMenu = () => {
-        // console.log('흑흙');
         setMenuHover(!MenuHover);
     }
 

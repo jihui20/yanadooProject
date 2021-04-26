@@ -28,9 +28,9 @@ const CardWrap = () => {
 
     const cardData = () => {
         axios
-            .get('https://jsonplaceholder.typicode.com/photos?albumId=1')
+        .get('https://jsonplaceholder.typicode.com/photos?albumId=1')
             .then(({data}) => {
-                console.log('성공');
+                // console.log('성공');
                 setCardInfo(data);
             })
             .catch(e => {

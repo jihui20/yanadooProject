@@ -1,5 +1,5 @@
 /* reset */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, textarea, button, select, input, pre{margin:0; padding:0;}
+/* html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, textarea, button, select, input, pre{margin:0; padding:0;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
 table{border-collapse:collapse; border-spacing:0;}
 hr{display:none;}
@@ -8,13 +8,13 @@ p, ul, ol, li, dl, dt, dd, form {list-style-image:none; list-style-position:outs
 img,fieldset,iframe{border:0 none;}
 button{border:0 none;background-color:transparent; cursor:pointer;}
 address,caption,cite,code,dfn,em,var{font-style:normal; font-weight:normal;}
-a{text-decoration:none;}
+a{text-decoration:none;} */
 
 
 .header-col{
   width:100%;
   padding:1em 0;
-  background-color:goldenrod;
+  background-color:#fff;
 }
 
 .header-col .inner-col{
@@ -27,7 +27,7 @@ a{text-decoration:none;}
 
 .logo{
   display:inline-block;
-  width:10%;
+  width:7%;
 }
 
 .logo img{
@@ -37,7 +37,7 @@ a{text-decoration:none;}
 .nav-box{
   display:inline-block;
   width:35%;
-  margin:0 3em 0 6em;
+  margin:0 12em 0 6em;
 }
 
 .main-nav-box{

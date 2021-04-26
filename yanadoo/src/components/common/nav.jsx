@@ -82,10 +82,9 @@ const Nav = () => {
                     <li key={mainNav.id}>
                         <a href="#!" onMouseEnter={() => {setNavHover(true)}} onMouseLeave={() => {setNavHover(false)}}>{mainNav.mainNav}</a>
                         <ul  className={navHover === true  ? 'sub-nav-box active' : 'sub-nav-box'}>
-                           {
+                           {subList &&
                                subList.map((subNav, idx) => (
-                                //    console.log(subNav)
-                                
+                                subNav.sub2 &&
                                    subNav.sub2.map(subList => (
                                     <li key={subList.id}>
                                        <a href="#!">{subList.desc}</a>
