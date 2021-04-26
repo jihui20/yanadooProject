@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "mainTitle": "영어 완전 정복 멤버십",
+      "subTitle": "A부터 Z까지 알려주는 영어의 모든 것!",
+      "price": 360000,
+      "totalPrice": 99000,
+      "discountRate": 78
+    },
+    {
+        "id": 2,
+        "mainTitle": "부동산 재테크 완전정복 멤버십",
+        "subTitle": "부동산 재테크 한번에 끝내기!",
+        "price": 150000,
+        "totalPrice": 99000,
+        "discountRate": 30
+      },
+      {
+        "id": 3,
+        "mainTitle": "날 따라해봐요 요렇게?",
+        "subTitle": "영어 어렵지 않아요!",
+        "price": 350000,
+        "totalPrice": 99000,
+        "discountRate": 45
+      },
+      {
+        "id": 4,
+        "mainTitle": "이것은 갈비인가 통닭인가",
+        "subTitle": "지금까지 이런맛은 없었다",
+        "price": 80000,
+        "totalPrice": 99000,
+        "discountRate": 80
+      },
+      {
+        "id": 5,
+        "mainTitle": "잘하자 지히야.........a",
+        "subTitle": "이것은 리액트 공부사이트입니다.",
+        "price": 100000,
+        "totalPrice": 99000,
+        "discountRate": 85
+      },
+      {
+        "id": 6,
+        "mainTitle": "권정렬쓰",
+        "subTitle": "I'm fine, thhank you",
+        "price": 65000,
+        "totalPrice": 99000,
+        "discountRate": 10
+      }
+  ]

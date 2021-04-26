@@ -37,7 +37,7 @@ a{text-decoration:none;} */
 .nav-box{
   display:inline-block;
   width:35%;
-  margin:0 12em 0 6em;
+  margin:0 9em 0 6em;
 }
 
 .main-nav-box{
@@ -78,3 +78,5 @@ a{text-decoration:none;} */
 .sub-nav-box li{
   display:block;
 }
+
+.user-name{width:11%;}

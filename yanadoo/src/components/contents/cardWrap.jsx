@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import classData from '../../data/classData.json';
+import MainTitle from './mainTitle';
 
 const Cardbox = styled.div`
     width:1060px;
@@ -8,57 +10,58 @@ const Cardbox = styled.div`
     border:1px solid red;
     li{
         display:inline-block;
-        width:33.3%;
+        position:relative;
+        width:32%;
         min-height:15em;
+        margin-right:1.3em;
+        padding:1em;
         vertical-align:top;
         border:1px solid #000;
         box-sizing:border-box;
+        border-radius:2em;
     }
-    img{
+    li:nth-of-type(3n){
+        margin-right:0;
+        border:1px solid magenta;
+    }
+    .class-title{
+        font-size:110%;
+    }
+    .class-title strong{
         display:block;
-        width:200px;
-        margin:0 auto;
+        font-size:130%;
     }
-
+    .class-price-box{
+        position:absolute;
+        bottom:1em;
+        right:1em;
+        border:1px solid red;
+    }
+ 
 `;
 
 const CardWrap = () => {
 
-    const [cardInfo, setCardInfo] = useState([]);
-
-    const cardData = () => {
-        axios
-        .get('https://jsonplaceholder.typicode.com/photos?albumId=1')
-            .then(({data}) => {
-                // console.log('성공');
-                setCardInfo(data);
-            })
-            .catch(e => {
-                console.log(e);
-            })
-
-    }
-
-    useEffect(() => {
-        cardData();
-        
-    }, [])
-
-
     return (
-        
-        <Cardbox>
-            <ul>
-                {cardInfo &&
-                 cardInfo.filter(cardList => cardList.id < 7).map((cardList) => (
-                     <li key={cardList.id}>
-                         <img src={cardList.url} alt="" />
-                         <p>{cardList.title}</p>
-                    </li>
-                 ))   
-                }
-            </ul>
-        </Cardbox>
+        <>
+            
+            <Cardbox>
+            <MainTitle mainTitle={'내가 듣고싶은 클래스만 묶어서 들을 수 있다?!'} subTitle={'야나두 추천 멤버십'}/>
+                <ul>
+                    {classData &&
+                    classData.map((data) => (
+                        <li key={data.id}>
+                            <p className="class-title">{data.subTitle}<strong>{data.mainTitle}</strong></p>
+                            <div className="class-price-box">
+                                <span>{data.price}</span>
+                                <p>{data.discountRate}%<em>{data.totalPrice}</em></p>
+                            </div>
+                        </li>
+                    ))   
+                    }
+                </ul>
+            </Cardbox>
+        </>
     )
 }
 

@@ -27,7 +27,7 @@ const Header = () => {
                     <h1 className="logo"><a href="#!"><img src="https://english.yanadoocdn.com/upload/yanadoo/pc/common/logo/logo_ynd_136x38_v2.png" alt="logo" /></a></h1>
                     <Nav />
                     <Search />
-                    <p><span>이지희</span> 회원님</p>
+                    <p className="user-name"><span>이지희</span> 회원님</p>
                     <MyMenu />
                     <Basket />
                 </div>
