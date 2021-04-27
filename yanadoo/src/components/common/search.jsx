@@ -3,13 +3,12 @@ import styled from 'styled-components';
 
 const Div = styled.div`
     display:inline-block;
-    width:15%;
     margin-right:1em;
 `
 
 const SearchInput = styled.input`
     width:100%;
-    height:2.5em;
+    height:2em;
     padding:.2em 1em;
     border:1px solid #444;
     border-radius:2em;

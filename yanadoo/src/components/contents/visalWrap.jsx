@@ -6,12 +6,14 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 const VisualSlide = styled.div`
-  width:1060px;
+  max-width:1060px;
+  width:100%;
   margin:0 auto;
   font-size:120%;
   font-weight:800;
   color:#000;
   word-break:keep-all;
+  box-sizing:border-box;
   .test{
     position:relative;
     height:300px;
@@ -26,6 +28,10 @@ const VisualSlide = styled.div`
     left:.5em;
     background-color:rgba(255, 255, 255, .5);
   }
+
+  @media ${(props) => props.theme.laptop}{
+    padding:0 1em;
+   }
 `;
 
 const settings = {
@@ -44,7 +50,7 @@ const settings = {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 1,
           autoplay: true

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const Div = styled.div`
     position:relative;
-    width:8%;
     margin:0 1em;
     padding:0 .3em;
     border:1px solid black;
