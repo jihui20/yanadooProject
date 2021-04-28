@@ -3,60 +3,9 @@ import Nav from './nav';
 import Search from './search';
 import MyMenu from './myMenu';
 import Basket from '../contents/basket';
-import HeaderBox from '../../style/headerStyle';
-import styled from 'styled-components';
+import {HeaderBox, HeaderMenu, MobileMenu} from '../../style/headerStyle';
 
-const HeaderMenu = styled.div`
-    display:flex;
-    width:93%;
-    justify-content:space-between;
-    align-items:center;
-    font-size:90%;
-    li{
-        display:inline-block;
-    }
 
-    @media ${(props) => props.theme.laptop}{
-        display:none;
-       }
-`
-
-const MobileMenu = styled.button`
-   display:none;
-   width:1.8em;
-   height:1.8em;
-   padding-top:.8em;
-   span{
-       display:block;
-       position:relative;
-       width:100%;
-       border-top:.25em solid #000;
-       text-indent:-9999px;
-   }
-
-   span:before{
-       content:'';
-       position:absolute;
-       top:-.8em;
-       left:0;
-       width:100%;
-       border-top:.25em solid #000;
-   }
-
-   span:after{
-    content:'';
-    position:absolute;
-    top:.3em;
-    left:0;
-    width:100%;
-    border-top:.25em solid #000;
-}
-
-   @media ${(props) => props.theme.laptop}{
-    display:inline-block;
-   }
-    
-`
 
 class Header extends Component {
     constructor(props) {

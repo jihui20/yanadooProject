@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const HeaderBox = styled.div`
+export const HeaderBox = styled.div`
     width:100%;
     padding:1em 0;
     background-color:#fff;
@@ -55,7 +55,7 @@ const HeaderBox = styled.div`
       .sub-nav-box{
         display:none;
         position:absolute;
-        top:3.4em;
+        top:4.4em;
         left:0;
         padding:0 1.4em;
         background-color:#fff;
@@ -88,4 +88,54 @@ const HeaderBox = styled.div`
     }
 `
 
-export default HeaderBox;
+export const HeaderMenu = styled.div`
+    display:flex;
+    width:93%;
+    justify-content:space-between;
+    align-items:center;
+    font-size:90%;
+    li{
+        display:inline-block;
+    }
+
+    @media ${(props) => props.theme.laptop}{
+        display:none;
+       }
+`
+
+export const MobileMenu = styled.button`
+   display:none;
+   width:1.8em;
+   height:1.8em;
+   padding-top:.8em;
+   span{
+       display:block;
+       position:relative;
+       width:100%;
+       border-top:.25em solid #000;
+       text-indent:-9999px;
+   }
+
+   span:before{
+       content:'';
+       position:absolute;
+       top:-.8em;
+       left:0;
+       width:100%;
+       border-top:.25em solid #000;
+   }
+
+   span:after{
+    content:'';
+    position:absolute;
+    top:.4em;
+    left:0;
+    width:100%;
+    border-top:.25em solid #000;
+}
+
+   @media ${(props) => props.theme.laptop}{
+    display:inline-block;
+   }
+    
+`

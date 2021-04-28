@@ -7,15 +7,17 @@ const Title = styled.p`
     text-align:center;
 
     strong{display:block;}
+
+    text-align:${test => test.align ? 'center' : 'left'};
 `;
 
 
-const MainTitle = (props) => {
+const MainTitle = (test) => {
 
     return (
-        <Title>
-            {props.subTitle}
-            <strong>{props.mainTitle}</strong>
+        <Title align={test.align}>
+            {test.subTitle}
+            <strong>{test.mainTitle}</strong>
         </Title>
     )
 }

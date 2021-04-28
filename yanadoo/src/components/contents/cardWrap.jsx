@@ -69,7 +69,7 @@ const CardWrap = () => {
         <>
             
             <Cardbox>
-            <MainTitle mainTitle={'내가 듣고싶은 클래스만 묶어서 들을 수 있다?!'} subTitle={'야나두 추천 멤버십'}/>
+            <MainTitle align={false} mainTitle={'내가 듣고싶은 클래스만 묶어서 들을 수 있다?!'} subTitle={'야나두 추천 멤버십'}/>
                 <ul>
                     {classData &&
                     classData.map((data) => (
