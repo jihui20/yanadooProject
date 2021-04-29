@@ -1,50 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Nav from './nav';
-import Search from './search';
-import MyMenu from './myMenu';
-import Basket from '../contents/basket';
+import UserMenu from './userMenu';
 import {HeaderBox, HeaderMenu, MobileMenu} from '../../style/headerStyle';
 
-
-
-class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state= {
-            headerSticky: false,
-            scrollTop: '',
-        }
-    }
-
-    handleScroll = (e) => {
-        // 스크롤 할때마다 state에 scroll한 만큼 scrollTop 값 증가하므로 이를 업데이트해줌, 
-        //따라서 스크롤 시점에 따라 특정액션을 추후에 state를 활용하여 구현 가능
-        const scrollTop = ('scroll', e.srcElement.scrollingElement.scrollTop);
-        this.setState({ scrollTop });
-      };
-
-      
-
-    render() {
-        console.log(this.state.scrollTop);
-        return (
+const Header = () => {
+    return (
             <HeaderBox>
                 <div className="inner-col">
+
                     <h1 className="logo"><a href="#!"><img src="https://english.yanadoocdn.com/upload/yanadoo/pc/common/logo/logo_ynd_136x38_v2.png" alt="logo" /></a></h1>
                     <HeaderMenu>
                         <Nav />
-                        <ul>
-                            <li><Search /></li>
-                            <li><p className="user-name"><span>이지희</span> 회원님</p></li>
-                            <li><MyMenu /></li>
-                            <li><Basket /></li>
-                        </ul>
+                        <UserMenu />
                     </HeaderMenu>
                     <MobileMenu type="button"><span>메뉴</span></MobileMenu>
+
                 </div>
             </HeaderBox>
-        );
-    }
+    );
+
 }
 
 export default Header;

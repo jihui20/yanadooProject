@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { ThemeProvider } from 'styled-components';
-import GlobalStyle from './style/global';
+import GlobalStyle from './style/globalStyle';
 import theme from './style/theme';
 
 ReactDOM.render(

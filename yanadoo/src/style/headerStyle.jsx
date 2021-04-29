@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeaderBox = styled.div`
+export const HeaderBox = styled.header`
     width:100%;
     padding:1em 0;
     background-color:#fff;
@@ -99,7 +99,27 @@ export const HeaderMenu = styled.div`
     }
 
     @media ${(props) => props.theme.laptop}{
-        display:none;
+        // display:none;
+        display:${props => props.showMenu ? 'block' : 'none'};
+        position:absolute;
+        top:5.25em;
+        left:0;
+        width:100%;
+        background-color:#fff;
+        z-index:1;
+
+        .nav-box {
+          width:100%;
+          margin-left:0;
+        }
+        .main-nav-box li{
+          float:none;
+          display:block;
+          text-align:center;
+        }
+        .right-menu-box{
+          display:none;
+        }
        }
 `
 

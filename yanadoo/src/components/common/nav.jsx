@@ -62,6 +62,8 @@ let subList = [
 
 const Nav = () => {
     const [navHover, setNavHover] = useState(false);
+    const [showSub, setShowSub] = useState('');
+    console.log(showSub);
     
     return (
         <nav className="nav-box">
@@ -85,9 +87,14 @@ const Nav = () => {
             } */}
 
             {
-                navList.map(mainNav => (
+                navList.map((mainNav,idx) => (
                     <li key={mainNav.id}>
-                        <a href="#!" onMouseEnter={() => {setNavHover(true)}} onMouseLeave={() => {setNavHover(false)}}>{mainNav.mainNav}</a>
+                        <a href="#!" onMouseEnter={
+                            () => {
+                                setNavHover(true);
+                                setShowSub(idx+1);
+                            }
+                            } onMouseLeave={() => {setNavHover(false)}}>{mainNav.mainNav}</a>
                         <ul  className={navHover === true  ? 'sub-nav-box active' : 'sub-nav-box'}>
                            {subList &&
                                subList.map((subNav, idx) => (
