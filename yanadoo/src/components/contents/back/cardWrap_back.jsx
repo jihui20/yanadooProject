@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import MainTitle from './mainTitle';
+import MainTitle from '../mainTitle';
 
 const Cardbox = styled.div`
     width:1060px;

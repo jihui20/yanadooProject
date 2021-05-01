@@ -8,16 +8,16 @@ const Title = styled.p`
 
     strong{display:block;}
 
-    text-align:${test => test.align ? 'center' : 'left'};
+    text-align:${props => props.alignStyle || 'center'}
 `;
 
 
-const MainTitle = (test) => {
+const MainTitle = (props) => {
 
     return (
-        <Title align={test.align}>
-            {test.subTitle}
-            <strong>{test.mainTitle}</strong>
+        <Title alignStyle={props.alignStyle}>
+            {props.subTitle}
+            <strong>{props.mainTitle}</strong>
         </Title>
     )
 }

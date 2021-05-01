@@ -5,22 +5,25 @@ import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss'; 
 import 'swiper/components/pagination/pagination.scss'; 
 import 'swiper/components/scrollbar/scrollbar.scss'; 
+import styled from 'styled-components';
 import classData from '../../data/classData.json';
 import MainTitle from './mainTitle';
-import {Cardbox} from '../../style/cardWrapStyle';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const CardWrap = () => {
-  
+const ClassBox = styled.div`
+  width:1200px;
+  margin:0 auto;
+  border:1px solid green;
+`
+
+const BestClassWrap = () => {
     return (
         <>
-            
-            <Cardbox>
-                <MainTitle mainTitle={'내가 듣고싶은 클래스만 묶어서 들을 수 있다?!'} subTitle={'야나두 추천 멤버십'}/>
+            <ClassBox>
+                <MainTitle alignStyle={'left'} mainTitle={'가장 호응이 좋았던!'} subTitle={'Top10 클래스'}/>
                 <Swiper
                     className='swiper-container swiper-test'
-                    // spaceBetween={50}
                     slidesPerView={1}
                     breakpoints={{
                       640: {
@@ -46,9 +49,9 @@ const CardWrap = () => {
                     } 
               </Swiper>
                 
-            </Cardbox>
+            </ClassBox>
         </>
     )
 }
 
-export default CardWrap;
+export default BestClassWrap;

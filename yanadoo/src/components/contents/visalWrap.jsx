@@ -1,20 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { 
-  Navigation, 
-  Pagination, 
-  Scrollbar, 
-  A11y 
-} from "swiper"; 
-import "swiper/swiper.scss";
-import "swiper/components/navigation/navigation.scss"; 
-import "swiper/components/pagination/pagination.scss"; 
-import "swiper/components/scrollbar/scrollbar.scss"; 
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper'; 
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss'; 
+import 'swiper/components/pagination/pagination.scss'; 
+import 'swiper/components/scrollbar/scrollbar.scss'; 
 import styled from 'styled-components';
 import axios from 'axios';
 
 const VisualSlide = styled.div`
-  max-width:1060px;
+  max-width:1200px;
   width:100%;
   margin:0 auto;
   font-size:120%;
@@ -43,6 +38,7 @@ const VisualSlide = styled.div`
 `;
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+
 const VisualWrap = () => {
 
   const [slideInfo, setslideInfo] = useState([]);
@@ -65,20 +61,34 @@ const VisualWrap = () => {
 
 
     return (
+      <VisualSlide>
       <Swiper
       className='swiper-container'
-      spaceBetween={50}
-      slidesPerView={3}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
+      slidesPerView={1}
+      breakpoints={{
+        640: {
+          // width: 640,
+          slidesPerView: 1,
+        },
+        960: {
+          // width: 768,
+          slidesPerView: 2,
+        },
+      }}
     >
-      <SwiperSlide> slide1 </SwiperSlide>
-      <SwiperSlide> slide2 </SwiperSlide>
-      <SwiperSlide> slide3 </SwiperSlide>
-      <SwiperSlide> slide4</SwiperSlide>
-      <SwiperSlide> slide5 </SwiperSlide>
-      <SwiperSlide> slide6 </SwiperSlide>
+      {slideInfo &&
+            slideInfo.map((slideList, idx) => (
+              <SwiperSlide key={idx}>
+                
+                  <div className="test" style={{backgroundImage: `url(` + slideList.picture + `)`}}>
+                    <p>{slideList.title}</p>
+                  </div>
+              </SwiperSlide>
+            ))
+
+          }
     </Swiper>
+    </VisualSlide>
     )
 }
 

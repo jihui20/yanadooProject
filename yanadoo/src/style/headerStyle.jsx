@@ -100,13 +100,13 @@ export const HeaderMenu = styled.div`
 
     @media ${(props) => props.theme.laptop}{
         // display:none;
-        display:${props => props.showMenu ? 'block' : 'none'};
+        display:${props => props.mobileHover ? 'block' : 'none'};
         position:absolute;
-        top:5.25em;
+        top:5.2em;
         left:0;
         width:100%;
         background-color:#fff;
-        z-index:1;
+        z-index:2;
 
         .nav-box {
           width:100%;

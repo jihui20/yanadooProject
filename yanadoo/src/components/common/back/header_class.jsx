@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Nav from './nav';
-import Search from './search';
-import MyMenu from './myMenu';
-import Basket from '../contents/basket';
-import {HeaderBox, HeaderMenu, MobileMenu} from '../../style/headerStyle';
+import Nav from '../nav';
+import Search from '../search';
+import MyMenu from '../myMenu';
+import Basket from '../../contents/basket';
+import {HeaderBox, HeaderMenu, MobileMenu} from '../../../style/headerStyle';
 
 
 

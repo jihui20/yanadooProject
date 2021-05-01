@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const Cardbox = styled.div`
-  max-width:1060px;
   width:100%;
   margin:5em auto 0;
-
+  .swiper-test{
+    padding-left:10em
+  }
   .card-item-box{
       display:inline-block;
-      width:33.3%;
+      width:26.5em ​!important;
       padding:1em;
       box-sizing:border-box;
       vertical-align:top;
@@ -45,15 +46,24 @@ export const Cardbox = styled.div`
       font-weight:800;
     color:#000;
   }
-  @media ${(props) => props.theme.laptop}{
+  @media ${(props) => props.theme.tablet}{
     .card-item-box{
-        width:50%;
+        // width:50%;
+    }
+    .swiper-test{
+      margin:0 1em;
+      padding-left:0;
     }
   }
 
   @media (max-width: 720px){
     .card-item-box{
-        width:100%;
+        // width:100%;
+      }
+  }
+  @media (max-width: 640px){
+    .swiper-test{
+        margin:0 1em;
       }
   }
 `
