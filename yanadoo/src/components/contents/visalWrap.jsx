@@ -8,7 +8,7 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 import styled from 'styled-components';
 import axios from 'axios';
 
-const VisualSlide = styled.div`
+const VisualSlideS = styled.div`
   max-width:1200px;
   width:100%;
   margin:0 auto;
@@ -61,34 +61,34 @@ const VisualWrap = () => {
 
 
     return (
-      <VisualSlide>
-      <Swiper
-      className='swiper-container'
-      slidesPerView={1}
-      breakpoints={{
-        640: {
-          // width: 640,
-          slidesPerView: 1,
-        },
-        960: {
-          // width: 768,
-          slidesPerView: 2,
-        },
-      }}
-    >
-      {slideInfo &&
-            slideInfo.map((slideList, idx) => (
-              <SwiperSlide key={idx}>
-                
-                  <div className="test" style={{backgroundImage: `url(` + slideList.picture + `)`}}>
-                    <p>{slideList.title}</p>
-                  </div>
-              </SwiperSlide>
-            ))
+      <VisualSlideS>
+        <Swiper
+        className='swiper-container'
+        slidesPerView={1}
+        breakpoints={{
+          640: {
+            // width: 640,
+            slidesPerView: 1,
+          },
+          960: {
+            // width: 768,
+            slidesPerView: 2,
+          },
+        }}
+      >
+        {slideInfo &&
+              slideInfo.map((slideList, idx) => (
+                <SwiperSlide key={idx}>
+                  
+                    <div className="test" style={{backgroundImage: `url(` + slideList.picture + `)`}}>
+                      <p>{slideList.title}</p>
+                    </div>
+                </SwiperSlide>
+              ))
 
-          }
-    </Swiper>
-    </VisualSlide>
+            }
+      </Swiper>
+    </VisualSlideS>
     )
 }
 

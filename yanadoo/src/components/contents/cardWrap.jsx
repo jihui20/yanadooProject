@@ -20,14 +20,14 @@ const CardWrap = () => {
                 <MainTitle mainTitle={'내가 듣고싶은 클래스만 묶어서 들을 수 있다?!'} subTitle={'야나두 추천 멤버십'}/>
                 <Swiper
                     className='swiper-container swiper-test'
-                    // spaceBetween={50}
+                    spaceBetween={25}
                     slidesPerView={1}
                     breakpoints={{
                       640: {
-                        slidesPerView: 2,
+                        slidesPerView: 1,
                       },
                       960: {
-                        slidesPerView: 3,
+                        slidesPerView: 2,
                       },
                     }}
                   >

@@ -11,8 +11,9 @@ import MainTitle from './mainTitle';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const ClassBox = styled.div`
-  width:1200px;
+const ClassBoxS = styled.div`
+  width:100%;
+  max-width:1200px;
   margin:0 auto;
   border:1px solid green;
 `
@@ -20,7 +21,7 @@ const ClassBox = styled.div`
 const BestClassWrap = () => {
     return (
         <>
-            <ClassBox>
+            <ClassBoxS>
                 <MainTitle alignStyle={'left'} mainTitle={'가장 호응이 좋았던!'} subTitle={'Top10 클래스'}/>
                 <Swiper
                     className='swiper-container swiper-test'
@@ -49,7 +50,7 @@ const BestClassWrap = () => {
                     } 
               </Swiper>
                 
-            </ClassBox>
+            </ClassBoxS>
         </>
     )
 }

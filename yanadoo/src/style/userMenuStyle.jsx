@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Search = styled.form`
+export const SearchS = styled.form`
     display:inline-block;
     margin-right:1em;
     .header-search{
@@ -13,7 +13,7 @@ export const Search = styled.form`
         box-sizing:border-box;
     }
 `
-export const MyPage = styled.div`
+export const MyPageS = styled.div`
     position:relative;
     margin:0 1em;
     padding:0 .3em;
@@ -44,7 +44,7 @@ export const MyPage = styled.div`
 
 
 `
-export const HideMenu = styled.ul`
+export const HideMenuS = styled.ul`
         display:${props => props.menu ? 'block' : 'none'};
         position:absolute;
         top:1.5em;
@@ -64,7 +64,7 @@ export const HideMenu = styled.ul`
             color:#000;
         } 
 `
-export const Basket = styled.button`
+export const BasketS = styled.button`
     display:inline-block;
     width:20px;
     background:url(https://english.yanadoocdn.com/upload/yanadoo/pc/common/img_join_now.jpg) no-repeat 50% 0;

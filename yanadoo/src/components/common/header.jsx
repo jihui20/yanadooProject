@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Nav from './nav';
 import UserMenu from './userMenu';
-import {HeaderBox, HeaderMenu, MobileMenu} from '../../style/headerStyle';
+import {HeaderBoxS, HeaderMenuS, MobileMenuS} from '../../style/headerStyle';
 
 const Header = () => {
     const [MobileMenuHover, setMobileMenuHover] = useState(false);
@@ -11,18 +11,18 @@ const Header = () => {
     }
 
     return (
-            <HeaderBox>
+            <HeaderBoxS>
                 <div className="inner-col">
 
                     <h1 className="logo"><a href="#!"><img src="https://english.yanadoocdn.com/upload/yanadoo/pc/common/logo/logo_ynd_136x38_v2.png" alt="logo" /></a></h1>
-                    <HeaderMenu mobileHover={MobileMenuHover}>
+                    <HeaderMenuS mobileHover={MobileMenuHover}>
                         <Nav />
                         <UserMenu />
-                    </HeaderMenu>
-                    <MobileMenu type="button" onClick={mobileHover}><span>메뉴</span></MobileMenu>
+                    </HeaderMenuS>
+                    <MobileMenuS type="button" onClick={mobileHover}><span>메뉴</span></MobileMenuS>
 
                 </div>
-            </HeaderBox>
+            </HeaderBoxS>
     );
 
 }

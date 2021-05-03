@@ -3,13 +3,16 @@ import styled from 'styled-components';
 export const Cardbox = styled.div`
   width:100%;
   margin:5em auto 0;
+  box-sizing:border-box;
+  overflow:hidden;
   .swiper-test{
-    padding-left:10em
+    max-width:1200px;
+    width:100%;
+    overflow:visible;
   }
   .card-item-box{
       display:inline-block;
       width:26.5em ​!important;
-      padding:1em;
       box-sizing:border-box;
       vertical-align:top;
   }
@@ -47,20 +50,17 @@ export const Cardbox = styled.div`
     color:#000;
   }
   @media ${(props) => props.theme.tablet}{
-    .card-item-box{
-        // width:50%;
-    }
+    padding:0 1em;
+    overflow:hidden;
     .swiper-test{
-      margin:0 1em;
-      padding-left:0;
+      margin:0;
     }
   }
 
-  @media (max-width: 720px){
-    .card-item-box{
-        // width:100%;
-      }
+  @media (max-width: 1060px){
+      padding:0 1em;
   }
+
   @media (max-width: 640px){
     .swiper-test{
         margin:0 1em;

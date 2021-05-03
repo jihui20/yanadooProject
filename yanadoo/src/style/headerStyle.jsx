@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeaderBox = styled.header`
+export const HeaderBoxS = styled.header`
     width:100%;
     padding:1em 0;
     background-color:#fff;
@@ -88,7 +88,7 @@ export const HeaderBox = styled.header`
     }
 `
 
-export const HeaderMenu = styled.div`
+export const HeaderMenuS = styled.div`
     display:flex;
     width:93%;
     justify-content:space-between;
@@ -102,7 +102,7 @@ export const HeaderMenu = styled.div`
         // display:none;
         display:${props => props.mobileHover ? 'block' : 'none'};
         position:absolute;
-        top:5.2em;
+        top:4.9em;
         left:0;
         width:100%;
         background-color:#fff;
@@ -123,7 +123,7 @@ export const HeaderMenu = styled.div`
        }
 `
 
-export const MobileMenu = styled.button`
+export const MobileMenuS = styled.button`
    display:none;
    width:1.8em;
    height:1.8em;
