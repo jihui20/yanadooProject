@@ -20,3 +20,4 @@ function tabEvent(e) {
   tabTarget.classList.add('active');
   document.querySelector('#' + tabData).classList.add('active');
 }
+
