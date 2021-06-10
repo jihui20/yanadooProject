@@ -3,7 +3,7 @@ import EventListItem from './eventListItem';
 
 function EventList() {
     const [pageIndex, setPageIndex] = useState(0);
-    const [tabClick, setTabClick] = useState(true);
+    const [tabMenu, setTabMenu] = useState(1);
     const [listItems, setListItems] = useState([]);
     const [list, setList] = useState([
         {
@@ -104,8 +104,7 @@ function EventList() {
         }
     ]);
 
-    const addList = () => {
-        console.log('ddd')
+    function addList() {
         let items = [];
         for(let i = 0; i <5; i++) {
             items[i] = list[i];
@@ -120,23 +119,26 @@ function EventList() {
         addList();  
     }, []);
 
-   const handleShow = (e) => {
-        const tabItem = document.querySelectorAll('.tab-item');
-        const tabContent = document.querySelectorAll('.tab-content');
+   function handleShow(id) {
+       setTabMenu(id);
+       
+        // const tabItem = document.querySelectorAll('.tab-item');
+        // const tabContent = document.querySelectorAll('.tab-content');
     
-          const tabTarget = e.currentTarget.parentNode;
-          const tabData = tabTarget.dataset.tab;
+        //   const tabTarget = e.currentTarget.parentNode;
+        //   const tabData = tabTarget.dataset.tab;
         
-          Array.prototype.forEach.call(tabItem, function(e) {
-            e.parentNode.classList.remove('active');
-          });
+        //   Array.prototype.forEach.call(tabItem, function(e) {
+        //     e.parentNode.classList.remove('active');
+        //   });
         
-          Array.prototype.forEach.call(tabContent, function(e) {
-            e.classList.remove('active');
-          });
+        //   Array.prototype.forEach.call(tabContent, function(e) {
+        //     e.classList.remove('active');
+        //   });
         
-          tabTarget.classList.add('active');
-          document.querySelector('#' + tabData).classList.add('active');
+        //   tabTarget.classList.add('active');
+        //   document.querySelector('#' + tabData).classList.add('active');
+
       }
     
     return (
@@ -146,11 +148,11 @@ function EventList() {
                     <div className="title-area">
                         <p>이벤트</p>
                     <ul>
-                        <li className="active" data-tab="tab1">
-                            <a href="#;" className="tab-item" onClick={handleShow}>진행중 이벤트</a>
+                        <li className={(tabMenu === 1 ? 'active' : '')} data-tab="tab1">
+                            <a href="#;" className="tab-item" onClick={() => handleShow(1)}>진행중 이벤트</a>
                         </li>
-                        <li className="" data-tab="tab2">
-                            <a href="#;" className="tab-item" onClick={handleShow}>종료된 이벤트</a>
+                        <li className={(tabMenu === 2 ? 'active' : '')} data-tab="tab2">
+                            <a href="#;" className="tab-item" onClick={() => handleShow(2)}>종료된 이벤트</a>
                         </li>
                     </ul>
                     </div>
@@ -159,10 +161,10 @@ function EventList() {
             <section className="list-col list">
             <div className="inner-col">
                 <div className="list-box">
-                    <ul id="tab1" className="tab-content progress-event active">
+                    <ul id="tab1" className={'tab-content progress-event ' + (tabMenu === 1 ? 'active' : '')}>
                     {listItems && listItems.map((item, idx) => <EventListItem key={idx} item={item} idx={idx} />)}
                     </ul>
-                    <ul id="tab2" className="tab-content end-event">
+                    <ul id="tab2" className={'tab-content end-event ' + (tabMenu === 2 ? 'active' : '')}>
                     {listItems && listItems.map((item, idx) => <EventListItem key={idx} item={item} idx={idx} />)}
                     </ul>
                     <div className="list-more-box">
