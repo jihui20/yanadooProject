@@ -18,10 +18,10 @@ function App() {
       <VisualWrap />
       <CardWrap />
       <BestClassWrap /> */}
-      <EventList />
+      {/* <EventList /> */}
       {/* <EventReply /> */}
       {/* <EventWrite /> */}
-      {/* <EventForm /> */}
+      <EventForm />
     </>
   );
 }

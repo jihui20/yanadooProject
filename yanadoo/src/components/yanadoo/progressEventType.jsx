@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import ReviewListItem from './reviewListItem';
 
-function EventType(props) {
+function ProgressEventType(props) {
     return (
         <div className={'participate-type ' + props.eventType}>
             <div className="participate-area">
@@ -20,7 +20,9 @@ function EventType(props) {
                     <span>52</span>
                 </p>
                 <button type="button" className="btn btn-register"><span>등록하기</span></button>
-                <textarea className="reply-box" placeholder="댓글을 입력해주세요."></textarea>
+                <div className="reply-box">
+                    <textarea placeholder="댓글을 입력해주세요."></textarea>
+                </div>
             </div>
             <div className="participate-list">
                 <ul>
@@ -38,4 +40,4 @@ function EventType(props) {
     )
 }
 
-export default EventType;
+export default ProgressEventType;

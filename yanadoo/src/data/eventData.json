@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "title": "1번째 리스트 야나두x와디즈 최초 공개! 진짜 현업에서 쓰는 야나두 비즈니스 응급 키트! 4월 한달동안만 진행!",
+        "dDay": "4",
+        "period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": false
+    },
+    {
+        "id": 2,
+        "title": "2번째 리스트",
+        "dDay": "66","period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": true
+    },
+    {
+        "id": 3,
+        "title": "3번째 리스트",
+        "dDay": "100",
+        "period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": false
+    },
+    {
+        "id": 4,
+        "title": "4번째 리스트",
+        "dDay": "78",
+        "period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": false
+    }
+    ,
+    {
+        "id": 5,
+        "title": "5번째 리스트",
+        "dDay": "100",
+        "period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": false
+    },
+    {
+        "id": 6,
+        "title": "6번째 리스트",
+        "dDay": "78",
+        "period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": false
+    },
+    {
+        "id": 7,
+        "title": "7번째 리스트",
+        "dDay": "4",
+        "period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": false
+    },
+    {
+        "id": 8,
+        "title": "8번째 리스트",
+        "dDay": "66","period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": true
+    },
+    {
+        "id": 9,
+        "title": "9번째 리스트",
+        "dDay": "100",
+        "period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": false
+    },
+    {
+        "id": 10,
+        "title": "10번째 리스트",
+        "dDay": "78",
+        "period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": false
+    }
+    ,
+    {
+        "id": 11,
+        "title": "11번째 리스트",
+        "dDay": "100",
+        "period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": false
+    },
+    {
+        "id": 12,
+        "title": "12번째 리스트",
+        "dDay": "78",
+        "period": "21.04.12(월) ~ 21.04.18(일)",
+        "announcement": "21.04.25(월)",
+        "detailBtn": false
+    }
+]

@@ -11,16 +11,16 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const ReviewListItem = React.memo((props) => {
-    const reviewImg = props.list.reviewImg;
+    const reviewList = props.list;
 
     // console.log(props.type);
     return (
         <li>
             <dl>
-                <dt style={{backgroundImage:`url(`+ props.list.profileThumb +`)`}}><span className="blind">프로필 이미지</span></dt>
+                <dt style={{backgroundImage:`url(`+ reviewList.profileThumb +`)`}}><span className="blind">프로필 이미지</span></dt>
                 <dd>
-                    <p><strong>{props.list.name}</strong></p>
-                    <p><span>{props.list.date}</span><span>{props.list.time}</span></p>
+                    <p><strong>{reviewList.name}</strong></p>
+                    <p><span>{reviewList.date}</span><span>{reviewList.time}</span></p>
                 </dd>
             </dl>
             
@@ -35,8 +35,8 @@ const ReviewListItem = React.memo((props) => {
                                     pagination={{ clickable: true }}
 
                                 >
-                                    {reviewImg &&
-                                        reviewImg.map((item, idx) => (
+                                    {reviewList.reviewImg &&
+                                        reviewList.reviewImg.map((item, idx) => (
                                             <SwiperSlide key={idx}>
                                                 <a href="#!">
                                                     <img src={item} alt="" />

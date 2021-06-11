@@ -1,113 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import EventListItem from './eventListItem';
+import eventListData from '../../data/eventData'
 
 function EventList() {
     const [pageIndex, setPageIndex] = useState(0);
     const [tabMenu, setTabMenu] = useState(1);
     const [listItems, setListItems] = useState([]);
-    const [list, setList] = useState([
-        {
-            id: 1,
-            title: '1번째 리스트 야나두x와디즈 최초 공개! 진짜 현업에서 쓰는 야나두 비즈니스 응급 키트! 4월 한달동안만 진행!',
-            dDay: '4',
-            period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: false
-        },
-        {
-            id: 2,
-            title: '2번째 리스트',
-            dDay: '66',period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: true
-        },
-        {
-            id: 3,
-            title: '3번째 리스트',
-            dDay: '100',
-            period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: false
-        },
-        {
-            id: 4,
-            title: '4번째 리스트',
-            dDay: '78',
-            period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: false
-        }
-        ,
-        {
-            id: 5,
-            title: '5번째 리스트',
-            dDay: '100',
-            period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: false
-        },
-        {
-            id: 6,
-            title: '6번째 리스트',
-            dDay: '78',
-            period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: false
-        },
-        {
-            id: 7,
-            title: '7번째 리스트',
-            dDay: '4',
-            period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: false
-        },
-        {
-            id: 8,
-            title: '8번째 리스트',
-            dDay: '66',period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: true
-        },
-        {
-            id: 9,
-            title: '9번째 리스트',
-            dDay: '100',
-            period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: false
-        },
-        {
-            id: 10,
-            title: '10번째 리스트',
-            dDay: '78',
-            period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: false
-        }
-        ,
-        {
-            id: 11,
-            title: '11번째 리스트',
-            dDay: '100',
-            period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: false
-        },
-        {
-            id: 12,
-            title: '12번째 리스트',
-            dDay: '78',
-            period: '21.04.12(월) ~ 21.04.18(일)',
-            announcement: '21.04.25(월)',
-            detailBtn: false
-        }
-    ]);
+    const [list, setList] = useState([]);
 
     function addList() {
         let items = [];
         for(let i = 0; i <5; i++) {
-            items[i] = list[i];
+            items[i] = eventListData[i];
         }
         setListItems([ ...listItems, ...items]);
         setPageIndex(pageIndex + 1);
@@ -119,7 +23,7 @@ function EventList() {
         addList();  
     }, []);
 
-   function handleShow(id) {
+   function tabShow(id) {
        setTabMenu(id);
        
         // const tabItem = document.querySelectorAll('.tab-item');
@@ -149,10 +53,10 @@ function EventList() {
                         <p>이벤트</p>
                     <ul>
                         <li className={(tabMenu === 1 ? 'active' : '')} data-tab="tab1">
-                            <a href="#;" className="tab-item" onClick={() => handleShow(1)}>진행중 이벤트</a>
+                            <a href="#;" className="tab-item" onClick={() => tabShow(1)}>진행중 이벤트</a>
                         </li>
                         <li className={(tabMenu === 2 ? 'active' : '')} data-tab="tab2">
-                            <a href="#;" className="tab-item" onClick={() => handleShow(2)}>종료된 이벤트</a>
+                            <a href="#;" className="tab-item" onClick={() => tabShow(2)}>종료된 이벤트</a>
                         </li>
                     </ul>
                     </div>
