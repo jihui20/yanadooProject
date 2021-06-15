@@ -11,7 +11,7 @@ function EventModal(props) {
             <div className="modal-content">
                 <button type="button" className="btn btn-cancel" onClick={hide}><span className="blind">닫기</span></button>
                 <p>이벤트 글을<br/>SNS에 공유해보세요.</p>
-                <ShareItem />\
+                <ShareItem />
             </div>
         </div>
     )
