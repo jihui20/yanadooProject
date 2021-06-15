@@ -9,8 +9,8 @@ import listData from '../../data/reviewListData';
 
 
 function EventForm() {
-    const [eventState, setEventState] = useState('end')
-    const [eventType, setEventType] = useState('write');
+    const [eventState, setEventState] = useState('progress')
+    const [eventType, setEventType] = useState('reply');
     const [reviewList, setReviewList] = useState([]);
 
     // function reviewData() {
@@ -27,7 +27,7 @@ function EventForm() {
     // }
 
     // useEffect(() => {
-    //     reviewData();  
+    //     reviewData();
     // }, []);
 
     const handleShow = (e) => {

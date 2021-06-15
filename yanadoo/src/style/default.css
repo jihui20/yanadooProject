@@ -7,6 +7,18 @@ textarea::placeholder{color: #b7b7c8; opacity: 1;/* 파이어폭스에서 뿌옇
 textarea::-webkit-input-placeholder{color: #b7b7c8;}
 textarea:-ms-input-placeholder{color: #b7b7c8;}
 textarea:-mos-input-placeholder{color: #b7b7c8;}
+
+.modal{display:none; position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0, 0, 0, .5); text-align:center; z-index:101;}
+.modal.active{display:-webkit-box; display:flex; -webkit-box-pack:center; justify-content:center; -webkit-box-align:center; align-items:center;}
+.modal .btn-cancel{position:absolute; top:3.9rem; right:3.9rem; width:3.4rem; height:3.4rem; background:url(../images/ico_cancel_112x112.png) no-repeat 50% 0 / 100%;}
+.modal .btn-cancel span{display:block; text-indent:-999rem;}
+.modal-content{position:relative; width:48rem; padding:6.8rem 2.5rem 2.5rem; font-size:1.8rem; line-height:2.4rem; background-color:#fff; border-radius:2rem; box-sizing:border-box;}
+.modal-content p{word-break:keep-all;}
+.modal .btn-group{margin-top:5rem; font-size:1.3rem;}
+.modal .btn-group button{background-color:#FFB914; border:1px solid #FFB914; width:100%; padding:1.6rem; border-radius:10rem;}
+.modal .btn-group button span{position:relative;}
+
+
 .btn span{position:relative;}
 .list-more-box button.btn-more{display:none;}
 .list-more-box .pagination{display:block; margin-top:4.1rem; text-align:center;}
@@ -102,7 +114,7 @@ textarea:-mos-input-placeholder{color: #b7b7c8;}
 
 
 .participate-type.write .reply-box{display:none;}
-.participate-type.write .participate-list ul li{display:inline-block; width:31.5%; min-height:48.5rem; margin-right:2.7%; margin-bottom:4rem; padding:0; border:.1rem solid #e7e7f0; vertical-align:top;}
+.participate-type.write .participate-list ul li{display:inline-block; width:31.5%; min-height:48.5rem; margin-right:2.7%; margin-bottom:4rem; padding:0 0 2rem; border:.1rem solid #e7e7f0; vertical-align:top;}
 .participate-type.write .participate-list ul li:nth-of-type(3n){margin-right:0;}
 .participate-type.write .participate-list ul li dl{padding:2.1rem;}
 .participate-type.write .participate-list ul li dt{width:5rem; height:5rem;}
@@ -133,6 +145,12 @@ textarea:-mos-input-placeholder{color: #b7b7c8;}
 .list-btn-col .btn-go-list{display:block; width:27rem; margin:auto; padding:2.1rem 0; font-weight:700; font-size:2rem; border:.1rem solid #cfcfda; border-radius:.5rem;}
 
 @media screen and (max-width:1024px) {
+	.modal.event-modal .modal-content{width:65rem; padding:6.6rem 0;}
+	.modal.event-modal .modal-content p{font-size:3rem; line-height:1.3;}
+	.modal.event-modal .share-item{width:85%; margin:0 auto;}
+	.modal.event-modal .share-item li{margin:3.3rem 1.6rem 0;}
+	.modal.event-modal .share-item li a{width:10.8rem; height:11rem;}
+
 	.list-more-box{padding:0 4.2rem;}
 	.list-more-box button.btn-more{display:block; width:100%; padding:2.4rem 0; font-size:2.6rem}
 	.list-more-box button.btn-more:after{content:''; position:absolute; top:-.3rem; right:0; bottom:0; left:0; width:1.6rem; height:1.6rem; margin:auto; background:url(../images/ico_arrow_63x63_b.png) no-repeat 50% 50% / 100%; transform:translateX(5rem);}
@@ -183,7 +201,7 @@ textarea:-mos-input-placeholder{color: #b7b7c8;}
 	.participate-list .list-more-box{padding:0;}
 	.participate-list ul li em{font-size:2.5rem;}
 
-	.participate-type.write .participate-list ul li{width:100%; min-height:82rem;}
+	.participate-type.write .participate-list ul li{width:100%;}
 	.participate-type.write .participate-list ul li dt{width:8rem; height:8rem;}
 	.participate-type.write .participate-list ul li dd strong{font-size:2.5rem;}
 	.participate-type.write .participate-list ul li dd span{font-size:2rem;}

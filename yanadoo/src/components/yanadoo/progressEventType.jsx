@@ -17,7 +17,7 @@ function ProgressEventType(props) {
                             return '댓글 이벤트 참여';
                         })()
                     }
-                    <span>52</span>
+                    <span>{props.reviewList.length}</span>
                 </p>
                 <button type="button" className="btn btn-register"><span>등록하기</span></button>
                 <div className="reply-box">
