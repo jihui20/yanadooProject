@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-function EndEventType(props) {
+function EndEventType() {
     const [btnToggle, setBtnToggle] = useState(false);
 
     function listToggle() {

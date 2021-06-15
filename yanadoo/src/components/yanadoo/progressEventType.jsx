@@ -3,21 +3,21 @@
 import React, { useState } from 'react';
 import ReviewListItem from './reviewListItem';
 
-function ProgressEventType(props) {
+function ProgressEventType({eventType, reviewList}) {
     return (
-        <div className={'participate-type ' + props.eventType}>
+        <div className={'participate-type ' + eventType}>
             <div className="participate-area">
                 <p>
                     {
                         (function(){
-                            if(props.eventType === 'write')
+                            if(eventType === 'write')
                             return '작성 이벤트 참여';
 
-                            if(props.eventType === 'reply')
+                            if(eventType === 'reply')
                             return '댓글 이벤트 참여';
                         })()
                     }
-                    <span>{props.reviewList.length}</span>
+                    <span>{reviewList.length}</span>
                 </p>
                 <button type="button" className="btn btn-register"><span>등록하기</span></button>
                 <div className="reply-box">
@@ -26,9 +26,9 @@ function ProgressEventType(props) {
             </div>
             <div className="participate-list">
                 <ul>
-                    {props.reviewList 
-                        && props.reviewList.map((list, idx) => 
-                        <ReviewListItem key={idx} list={list} idx={idx} type={props.eventType} />
+                    {reviewList 
+                        && reviewList.map((list, idx) => 
+                        <ReviewListItem key={idx} list={list} idx={idx} type={eventType} />
                         )
                     }
                 </ul>

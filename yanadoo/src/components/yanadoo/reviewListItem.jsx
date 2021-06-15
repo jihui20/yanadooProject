@@ -10,23 +10,21 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const ReviewListItem = React.memo((props) => {
-    const reviewList = props.list;
+const ReviewListItem = React.memo(({list, type}) => {
 
-    // console.log(props.type);
     return (
         <li>
             <dl>
-                <dt style={{backgroundImage:`url(`+ reviewList.profileThumb +`)`}}><span className="blind">프로필 이미지</span></dt>
+                <dt style={{backgroundImage:`url(`+ list.profileThumb +`)`}}><span className="blind">프로필 이미지</span></dt>
                 <dd>
-                    <p><strong>{reviewList.name}</strong></p>
-                    <p><span>{reviewList.date}</span><span>{reviewList.time}</span></p>
+                    <p><strong>{list.name}</strong></p>
+                    <p><span>{list.date}</span><span>{list.time}</span></p>
                 </dd>
             </dl>
             
             {
                 (function(){
-                    if(props.type === 'write')
+                    if(type === 'write')
                     return (
                         <div>
                             <Swiper
@@ -35,8 +33,8 @@ const ReviewListItem = React.memo((props) => {
                                     pagination={{ clickable: true }}
 
                                 >
-                                    {reviewList.reviewImg &&
-                                        reviewList.reviewImg.map((item, idx) => (
+                                    {list.reviewImg &&
+                                        list.reviewImg.map((item, idx) => (
                                             <SwiperSlide key={idx}>
                                                 <a href="#!">
                                                     <img src={item} alt="" />
@@ -50,7 +48,7 @@ const ReviewListItem = React.memo((props) => {
                 })()
             }
             <p>
-                <em>{props.list.reply}</em>
+                <em>{list.reply}</em>
             </p>
         </li>
     )

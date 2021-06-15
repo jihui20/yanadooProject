@@ -5,12 +5,13 @@ import Example from '../../images/img_event_test.png';
 import EndEventType from './endEventType';
 import EventDetailTitle from './eventDetailTitle';
 import ProgressEventType from './progressEventType';
+import ReviewModal from './reviewModal';
 import listData from '../../data/reviewListData';
 
 
 function EventForm() {
     const [eventState, setEventState] = useState('progress')
-    const [eventType, setEventType] = useState('reply');
+    const [eventType, setEventType] = useState('write');
     const [reviewList, setReviewList] = useState([]);
 
     // function reviewData() {

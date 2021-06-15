@@ -3,18 +3,17 @@
 import React, { useState } from 'react';
 import Example from '../../images/img_bnr_test.png';
 
-const EventListItem = React.memo((props) => {
-    const listItem = props.item;
+const EventListItem = React.memo(({item, idx}) => {
     
     return (
         <li>
              <a href="#;">
                  <div className="list-thumb">
-                     <em>{props.idx + 1}</em>
+                     <em>{idx + 1}</em>
                      <div className="button-box">
                          {
                              (function(){
-                                if(listItem.detailBtn == true)
+                                if(item.detailBtn == true)
                                 return <button type="button" className="btn btn-detail"><span>내용보기</span></button>
                              })()
                          }
@@ -24,9 +23,9 @@ const EventListItem = React.memo((props) => {
                      <img src={Example} alt="" />
                  </div>
                  <div className="list-desc">
-                     <p><strong>{listItem.title}</strong></p>
-                     <p className="list-period">{listItem.period}</p>
-                     <p className="list-announcement">{listItem.announcement}</p>
+                     <p><strong>{item.title}</strong></p>
+                     <p className="list-period">{item.period}</p>
+                     <p className="list-announcement">{item.announcement}</p>
                  </div>
              </a>
          </li>

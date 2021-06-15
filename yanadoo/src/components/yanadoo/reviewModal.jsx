@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import ShareItem from './shareItem';
 
-function EventModal({show, hide}) {
+function ReviewModal(props) {
+    const { show, hide } = props;
 
     return (
         <div className={'modal event-modal ' + (show && 'active')}>
@@ -16,4 +17,4 @@ function EventModal({show, hide}) {
     )
 };
 
-export default EventModal;
+export default ReviewModal;

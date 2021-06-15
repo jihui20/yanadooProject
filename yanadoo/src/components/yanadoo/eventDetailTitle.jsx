@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import ShareItem from './shareItem';
 import EventModal from './eventModal';
 
-function EventDetailTitle(props) {
+function EventDetailTitle({eventState}) {
     const [modalActive, setModalActive] = useState(false);
 
     function showModal() {
@@ -17,7 +17,7 @@ function EventDetailTitle(props) {
 
     return (
         <>
-            <section className={'detail-title-col ' + props.eventState}>
+            <section className={'detail-title-col ' + eventState}>
                 <div className="inner-col">
                     <div className="list-detail-title">
                         <div className="title-share-area">
